@@ -22,31 +22,32 @@
       top: 0;
       z-index: 1000;
     }
-    .count-display {
-  position: absolute;
-  top: 15px; /* Adjust to place inside or near the header */
-  right: 20px;
-  background: #fff;
-  color: #007BFF;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-  font-weight: bold;
-}
+    
+ .count-display {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #ffcccc; /* Temporary background for visibility */
+      color: #007BFF;
+      border-radius: 10px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      font-weight: bold;
+    }
 
-.count-display span {
-  display: block;
-  margin-bottom: 5px;
-}
+    .count-display span {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-.count-display .occupied {
-  color: #007BFF;
-}
+    .count-display .occupied {
+      color: #007BFF;
+    }
 
-.count-display .vacant {
-  color: #28a745;
-}
+    .count-display .vacant {
+      color: #28a745;
+    }
 
     #greeting {
       text-align: center;
@@ -294,32 +295,26 @@
     <h1>Camp Sustainability Guidelines</h1>
     <p id="greeting"></p>
   </header>
-  
- <!-- Occupancy Count -->
+
+  <!-- Occupancy Count -->
   <div class="count-display">
     <span class="occupied">Occupied Beds: <strong>1040</strong></span>
     <span class="vacant">Vacant Rooms: <strong>30</strong></span>
   </div>
-</body>
-  
-<div id="notice">
+
+  <!-- Notice -->
+  <div id="notice">
     <h2>🛑 Notice: Steel Laundry Hanger Collection</h2>
     <p>Dear Resident,</p>
     <p>📢 Please return the unused steel laundry hanger with your daily laundry or leave it outside your door. The camp team will collect it.</p>
     <p>Thanks for your cooperation!</p>
     <p class="text-right">🚧 Contractor Camp Management</p>
-</div>
+  </div>
 
-
-  <!-- Home Button -->
+  <!-- Home and About Buttons -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
   <a class="about-button" href="about.html">ℹ️ About</a>
-  
-<!-- Occupancy Count -->
-  <div class="count-display">
-    <span class="occupied">Occupied Beds: <strong>1040</strong></span>
-    <span class="vacant">Vacant Rooms: <strong>30</strong></span>
-  </div>
+</body>
   
 <!-- Important Links Section -->
   <div id="important-links">
