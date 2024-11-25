@@ -22,6 +22,31 @@
       top: 0;
       z-index: 1000;
     }
+    .count-display {
+  position: absolute;
+  top: 15px; /* Adjust to place inside or near the header */
+  right: 20px;
+  background: #fff;
+  color: #007BFF;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.count-display span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.count-display .occupied {
+  color: #007BFF;
+}
+
+.count-display .vacant {
+  color: #28a745;
+}
 
     #greeting {
       text-align: center;
@@ -189,30 +214,6 @@
       background: #218838;
     }
     
-.count-display {
-      position: absolute;
-      top: 15px;
-      right: 150px;
-      background: #fff;
-      color: #007BFF;
-      border-radius: 10px;
-      padding: 10px 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      font-size: 1em;
-      font-weight: bold;
-    }
-
-    .count-display span {
-      display: block;
-    }
-
-    .count-display .occupied {
-      color: #007BFF;
-    }
-
-    .count-display .vacant {
-      color: #28a745;
-    }
     .popup {
       display: none;
       position: fixed;
@@ -293,7 +294,14 @@
     <h1>Camp Sustainability Guidelines</h1>
     <p id="greeting"></p>
   </header>
-
+  
+ <!-- Occupancy Count -->
+  <div class="count-display">
+    <span class="occupied">Occupied Beds: <strong>1040</strong></span>
+    <span class="vacant">Vacant Rooms: <strong>30</strong></span>
+  </div>
+</body>
+  
 <div id="notice">
     <h2>🛑 Notice: Steel Laundry Hanger Collection</h2>
     <p>Dear Resident,</p>
