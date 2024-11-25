@@ -306,12 +306,158 @@
   <!-- Home Button -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
   <a class="about-button" href="about.html">ℹ️ About</a>
+  
 <!-- Occupancy Count -->
   <div class="count-display">
     <span class="occupied">Occupied Beds: <strong>1040</strong></span>
     <span class="vacant">Vacant Rooms: <strong>30</strong></span>
   </div>
   
+<!-- Important Links Section -->
+  <div id="important-links">
+    <h3>Important Links</h3>
+    <ul>
+      <li><a href="https://1drv.ms/x/s!Ag8UdL7ZbE2RhkY8mpCVeJMYwze4?e=f0yWIs" target="_blank">Daily Consumable Request</a></li>
+    <li><a href="https://1drv.ms/b/s!Ag8UdL7ZbE2RgaQfC-PanM5XvJ8JSA?e=5LIQHF" target="_blank">Maintenance Request Form</a></li>
+    <li><a href="https://1drv.ms/f/s!Ag8UdL7ZbE2RgaNmYjTkOH5w3k2IcQ?e=1mqRsv" target="_blank">All Camp Information</a></li>
+<li><a href="http://10.174.139.142/mrbs/web/index.php" target="_blank">Booking Camp Facility</a></li>
+    </ul>
+  </div>
+
+<script>
+  // Dynamic greeting logic
+  function displayGreeting() {
+    const currentHour = new Date().getHours();
+    let greetingMessage = "";
+
+    if (currentHour >= 5 && currentHour < 12) {
+      greetingMessage = "🌞 Good Morning, Residents!
+Welcome to Contractor Camp – where your comfort and needs are our Top priority.💁 How may I assist you today?📞";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      greetingMessage = "☀️ Good Afternoon, Residents! Welcome to Contractor Camp – striving to make your day smoother and better. 💁 How may I assist you this afternoon?📞";
+    } else {
+      greetingMessage = "🌙 Good Evening, Residents! Welcome to Contractor Camp – ensuring your stay is always pleasant and peaceful. 💁 How may I assist you tonight?📞";
+    }
+
+    document.getElementById("greeting").innerText = greetingMessage;
+  }
+
+  function goBack() {
+    const details = document.querySelectorAll('.details');
+    details.forEach(detail => detail.style.display = 'none');
+    const mainMenu = document.getElementById('main-menu');
+    if (mainMenu) mainMenu.style.display = 'block';
+  }
+
+  window.onload = displayGreeting;
+</script>
+</body>
+</html>
+
+  <div class="container" id="main-menu">
+  <div class="topic-list">
+    <div class="topic" onclick="showDetails('smoking')">
+      <img src="https://cdn-icons-png.flaticon.com/512/6448/6448070.png" alt="Smoking Icon">
+      🚭 Smoking in Designated Areas
+    </div>
+    <div class="topic" onclick="showDetails('trash')">
+      <img src="https://img.icons8.com/color/48/null/recycle-bin.png" alt="Trash Bins Icon">
+      ♻️ Using Trash Bins
+    </div>
+    <div class="topic" onclick="showDetails('towels')">
+      <img src="https://cdn1.iconfinder.com/data/icons/infection-prevention/128/13_Hand_Towel-512.png" alt="Paper Towels Icon">
+      🧻 Conserving Paper Towels
+    </div>
+    <div class="topic" onclick="showDetails('water')">
+      <img src="https://cdn-icons-png.flaticon.com/512/3440/3440291.png" alt="Water Tap Icon">
+      🚰 Turning Off Taps
+    </div>
+    <div class="topic" onclick="showDetails('printing')">
+      <img src="https://cdn-icons-png.flaticon.com/256/2832/2832794.png" alt="Colorful Printer Icon">
+      🖨️ Minimizing Color Printing
+    </div>
+    <div class="topic" onclick="showDetails('lights')">
+      <img src="https://img.icons8.com/color/48/null/light-on.png" alt="Light Bulb Icon">
+      💡 Switching Off Lights
+    </div>
+    <div class="topic" onclick="showDetails('bottles')">
+      <img src="https://cdn0.iconfinder.com/data/icons/plastic-pollution-13/64/No-plastic-bottle-crushed-junk-512.png" alt="Water Bottle Icon">
+      🍼 Crushing Water Bottles
+    </div>
+    <div class="topic" onclick="showDetails('driving')">
+      <img src="https://img.lovepik.com/free-png/20210923/lovepik-car-icon-free-vector-illustration-material-png-image_401289221_wh1200.png" alt="Driving Icon">
+      🚗 Slow Driving
+    </div>
+  </div>
+</div>
+
+
+<!-- Detailed Descriptions for Each Topic -->
+  <div class="container details" id="smoking">
+    <h2>🚭 Smoking in Designated Areas</h2>
+    <p>Smoking is restricted to designated areas to ensure safety, minimize fire hazards, and protect non-smokers from passive smoke.</p>
+    <h3>Importance:</h3>
+    <ul>
+      <li><strong>Fire Safety:</strong> Cigarette butts and ash in non-designated areas can cause fires.</li>
+      <li><strong>Health Concerns:</strong> Passive smoking affects non-smokers and poses serious risks.</li>
+      <li><strong>Cleanliness:</strong> Prevents littering of cigarette butts, keeping surroundings clean.</li>
+      <li><strong>Compliance with Regulations:</strong> Many projects mandate designated smoking areas.</li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
+      <a class="nav-button" onclick="showDetails('trash')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
+
+  </div>
+
+  <!-- Detailed Descriptions for Each Topic -->
+
+  <div class="container details" id="trash">
+    <h2>♻️ Using Trash Bins</h2>
+    <p>Proper disposal of waste in trash bins is essential for maintaining a clean and organized project site.</p>
+    <h3>Importance:</h3>
+    <ul>
+      <li><strong>Hygiene and Sanitation:</strong> Keeps the area free from litter, reducing the risk of diseases caused by pests.</li>
+      <li><strong>Environmental Protection:</strong> Proper waste segregation allows recyclable materials to be processed, reducing landfill usage.</li>
+      <li><strong>Aesthetics:</strong> A clean workspace enhances morale and creates a professional environment.</li>
+      <li><strong>Safety:</strong> Reduces the chances of tripping hazards and injuries caused by scattered waste.</li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
+
+  </div>
+
+  <div class="container details" id="towels">
+    <h2>🧻 Conserving Paper Towels</h2>
+    <p>Conserving paper towels in washrooms and other areas minimizes waste and reduces environmental impact.</p>
+    <h3>Importance:</h3>
+    <ul>
+      <li><strong>Environmental Sustainability:</strong> Saves trees and reduces deforestation associated with paper production.</li>
+      <li><strong>Cost-Effectiveness:</strong> Reduces operational costs for the project by minimizing waste.</li>
+      <li><strong>Efficient Resource Usage:</strong> Encourages employees to use only what is necessary, promoting responsibility.</li>
+      <li><strong>Waste Management:</strong> Less paper waste means easier disposal and fewer environmental hazards.</li>
+    </ul>
+    <div class="nav-buttons">
+      <a class="nav-button" onclick="showDetails('trash')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('water')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
+
+  </div>
+
 <div class="container details" id="water">
     <h2>🚰 Turning Off Taps</h2>
     <p>Turning off water taps after use is a simple but crucial step in conserving water resources and ensuring sustainability for the project and community.</p>
@@ -607,4 +753,3 @@ These practices lay the groundwork for a safe, sustainable, and efficient projec
 </div>
 </body>
 </html>
-
