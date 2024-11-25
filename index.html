@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contractor Camp Sustainability Guidelines</title>
   <style>
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -29,104 +30,14 @@
       color: #FFFFFF;
     }
 
-    .home-button {
+.important-links {
       position: absolute;
-      top: 15px;
-      right: 20px;
-      padding: 10px 15px;
-      background: #28a745;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1em;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .home-button:hover {
-      background: #218838;
-    }
-
-    .about-button {
-      position: absolute;
-      top: 15px;
-      right: 120px;
-      padding: 10px 15px;
-      background: #007BFF;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1em;
-      cursor: pointer;
-      z-index: 1000;
-    }
-
-    .about-button:hover {
-      background: #0056b3;
-    }
-
-    .count-display {
-      position: absolute;
-      top: 15px;
-      right: 300px;
-      background: #fff;
-      color: #007BFF;
-      border-radius: 10px;
-      padding: 10px 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      font-size: 1em;
-      font-weight: bold;
-    }
-
-    .count-display span {
-      display: block;
-    }
-
-    .count-display .occupied {
-      color: #007BFF;
-    }
-
-    .count-display .vacant {
-      color: #28a745;
-    }
-
-    #notice {
-      border: 2px solid #f44336;
-      border-radius: 8px;
-      padding: 20px;
-      background-color: #fff3f3;
-      font-family: Arial, sans-serif;
-      margin: 20px auto;
-      width: 80%;
-      display: block;
-    }
-
-    #notice h2 {
-      color: #d32f2f;
-      text-align: center;
-    }
-
-    #notice p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    #notice p.text-right {
-      text-align: right;
-      font-style: italic;
-      color: #666;
-    }
-
-    .important-links {
-      position: fixed;
-      top: 60px;
+      top: 20px;
       left: 20px;
       background: white;
       border-radius: 5px;
       padding: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
     }
 
     .important-links h3 {
@@ -153,6 +64,228 @@
     .important-links a:hover {
       text-decoration: underline;
     }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .topic-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .topic {
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .topic:hover {
+      background: #007BFF;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .topic img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      display: none;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .nav-button {
+      padding: 10px 15px;
+      background: #FF0000;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-button:hover {
+      background: #0056b3;
+    }
+.nav-buttons {
+    display: flex; 
+    gap: 10px; 
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+    .about-button {
+    position: absolute;
+    top: 15px; /* Same top position as Home */
+    right: 120px; /* Adjust to position next to Home */
+    padding: 10px 15px;
+    background: #007BFF; /* Blue for About button */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.about-button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+    .home-button {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 10px 15px;
+      background: #28a745;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .home-button:hover {
+      background: #218838;
+    }
+    
+.count-display {
+      position: absolute;
+      top: 15px;
+      right: 150px;
+      background: #fff;
+      color: #007BFF;
+      border-radius: 10px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .count-display span {
+      display: block;
+    }
+
+    .count-display .occupied {
+      color: #007BFF;
+    }
+
+    .count-display .vacant {
+      color: #28a745;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #007BFF;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1em;
+      z-index: 1000;
+    }
+
+    .contact-details {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-details table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .contact-details th,
+    .contact-details td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .contact-details th {
+      background: #007BFF;
+      color: white;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+#notice {
+            border: 2px solid #f44336;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff3f3;
+            font-family: Arial, sans-serif;
+            margin: 20px auto;
+            width: 80%;
+            display: block;
+        }
+        #notice h2 {
+            color: #d32f2f;
+            text-align: center;
+        }
+        #notice p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        #notice p.text-right {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+        }
+
   </style>
 </head>
 <body>
@@ -161,158 +294,24 @@
     <p id="greeting"></p>
   </header>
 
-  <div id="notice">
+<div id="notice">
     <h2>🛑 Notice: Steel Laundry Hanger Collection</h2>
     <p>Dear Resident,</p>
     <p>📢 Please return the unused steel laundry hanger with your daily laundry or leave it outside your door. The camp team will collect it.</p>
     <p>Thanks for your cooperation!</p>
     <p class="text-right">🚧 Contractor Camp Management</p>
-  </div>
+</div>
 
+
+  <!-- Home Button -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
   <a class="about-button" href="about.html">ℹ️ About</a>
-
+<!-- Occupancy Count -->
   <div class="count-display">
     <span class="occupied">Occupied Beds: <strong>1040</strong></span>
     <span class="vacant">Vacant Rooms: <strong>30</strong></span>
   </div>
-
-  <div class="important-links">
-    <h3>Important Links</h3>
-    <ul>
-      <li><a href="link1.html" target="_blank">Daily Consumable Request</a></li>
-      <li><a href="link2.html" target="_blank">Maintenance Request Form</a></li>
-      <li><a href="link3.html" target="_blank">All Camp Information</a></li>
-      <li><a href="link4.html" target="_blank">Booking Camp Facility</a></li>
-    </ul>
-  </div>
-
-  <script>
-    function updateGreeting() {
-      const hour = new Date().getHours();
-      const greetingElement = document.getElementById('greeting');
-      if (hour < 12) {
-        greetingElement.textContent = "🌞 Good morning residents, welcome to Contractor Camp!";
-      } else if (hour < 18) {
-        greetingElement.textContent = "☀️ Good afternoon residents, welcome to Contractor Camp!";
-      } else {
-        greetingElement.textContent = "🌙 Good evening residents, welcome to Contractor Camp!";
-      }
-    }
-
-    function goBack() {
-      window.location.href = "index.html"; // Replace with your home page URL
-    }
-
-    window.onload = updateGreeting;
-  </script>
-</body>
-</html>
-
-  <div class="container" id="main-menu">
-  <div class="topic-list">
-    <div class="topic" onclick="showDetails('smoking')">
-      <img src="https://cdn-icons-png.flaticon.com/512/6448/6448070.png" alt="Smoking Icon">
-      🚭 Smoking in Designated Areas
-    </div>
-    <div class="topic" onclick="showDetails('trash')">
-      <img src="https://img.icons8.com/color/48/null/recycle-bin.png" alt="Trash Bins Icon">
-      ♻️ Using Trash Bins
-    </div>
-    <div class="topic" onclick="showDetails('towels')">
-      <img src="https://cdn1.iconfinder.com/data/icons/infection-prevention/128/13_Hand_Towel-512.png" alt="Paper Towels Icon">
-      🧻 Conserving Paper Towels
-    </div>
-    <div class="topic" onclick="showDetails('water')">
-      <img src="https://cdn-icons-png.flaticon.com/512/3440/3440291.png" alt="Water Tap Icon">
-      🚰 Turning Off Taps
-    </div>
-    <div class="topic" onclick="showDetails('printing')">
-      <img src="https://cdn-icons-png.flaticon.com/256/2832/2832794.png" alt="Colorful Printer Icon">
-      🖨️ Minimizing Color Printing
-    </div>
-    <div class="topic" onclick="showDetails('lights')">
-      <img src="https://img.icons8.com/color/48/null/light-on.png" alt="Light Bulb Icon">
-      💡 Switching Off Lights
-    </div>
-    <div class="topic" onclick="showDetails('bottles')">
-      <img src="https://cdn0.iconfinder.com/data/icons/plastic-pollution-13/64/No-plastic-bottle-crushed-junk-512.png" alt="Water Bottle Icon">
-      🍼 Crushing Water Bottles
-    </div>
-    <div class="topic" onclick="showDetails('driving')">
-      <img src="https://img.lovepik.com/free-png/20210923/lovepik-car-icon-free-vector-illustration-material-png-image_401289221_wh1200.png" alt="Driving Icon">
-      🚗 Slow Driving
-    </div>
-  </div>
-</div>
-
-
-<!-- Detailed Descriptions for Each Topic -->
-  <div class="container details" id="smoking">
-    <h2>🚭 Smoking in Designated Areas</h2>
-    <p>Smoking is restricted to designated areas to ensure safety, minimize fire hazards, and protect non-smokers from passive smoke.</p>
-    <h3>Importance:</h3>
-    <ul>
-      <li><strong>Fire Safety:</strong> Cigarette butts and ash in non-designated areas can cause fires.</li>
-      <li><strong>Health Concerns:</strong> Passive smoking affects non-smokers and poses serious risks.</li>
-      <li><strong>Cleanliness:</strong> Prevents littering of cigarette butts, keeping surroundings clean.</li>
-      <li><strong>Compliance with Regulations:</strong> Many projects mandate designated smoking areas.</li>
-    </ul>
-    <div class="nav-buttons">
-      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
-      <a class="nav-button" onclick="showDetails('trash')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
-
-  </div>
-
-  <!-- Detailed Descriptions for Each Topic -->
-
-  <div class="container details" id="trash">
-    <h2>♻️ Using Trash Bins</h2>
-    <p>Proper disposal of waste in trash bins is essential for maintaining a clean and organized project site.</p>
-    <h3>Importance:</h3>
-    <ul>
-      <li><strong>Hygiene and Sanitation:</strong> Keeps the area free from litter, reducing the risk of diseases caused by pests.</li>
-      <li><strong>Environmental Protection:</strong> Proper waste segregation allows recyclable materials to be processed, reducing landfill usage.</li>
-      <li><strong>Aesthetics:</strong> A clean workspace enhances morale and creates a professional environment.</li>
-      <li><strong>Safety:</strong> Reduces the chances of tripping hazards and injuries caused by scattered waste.</li>
-    </ul>
-    <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
-
-  </div>
-
-  <div class="container details" id="towels">
-    <h2>🧻 Conserving Paper Towels</h2>
-    <p>Conserving paper towels in washrooms and other areas minimizes waste and reduces environmental impact.</p>
-    <h3>Importance:</h3>
-    <ul>
-      <li><strong>Environmental Sustainability:</strong> Saves trees and reduces deforestation associated with paper production.</li>
-      <li><strong>Cost-Effectiveness:</strong> Reduces operational costs for the project by minimizing waste.</li>
-      <li><strong>Efficient Resource Usage:</strong> Encourages employees to use only what is necessary, promoting responsibility.</li>
-      <li><strong>Waste Management:</strong> Less paper waste means easier disposal and fewer environmental hazards.</li>
-    </ul>
-    <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('trash')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('water')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
-
-  </div>
-
+  
 <div class="container details" id="water">
     <h2>🚰 Turning Off Taps</h2>
     <p>Turning off water taps after use is a simple but crucial step in conserving water resources and ensuring sustainability for the project and community.</p>
