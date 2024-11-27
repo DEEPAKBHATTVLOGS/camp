@@ -23,6 +23,24 @@
       z-index: 1000;
     }
     
+ .camp-weather-container {
+  display: flex;
+  justify-content: space-around; /* Space between components */
+  margin-top: 20px;
+}
+
+.camp-details,
+.weather-widget {
+  flex: 1; /* Make components equal width */
+  margin: 10px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  text-align: center;
+}
+
     #greeting {
       text-align: center;
       font-size: 1.5em;
@@ -203,63 +221,7 @@
       font-size: 1em;
       z-index: 1000;
     }
-.camp-weather-container {
-  display: flex;
-  justify-content: space-around; /* Space between components */
-  margin-top: 20px;
-}
 
-.camp-details,
-.weather-widget {
-  flex: 1; /* Make components equal width */
-  margin: 10px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-  text-align: center;
-}
-
-.camp-details h3,
-.weather-widget h3 {
-  margin-bottom: 10px;
-  color: #007BFF;
-}
-
-.camp-details table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.camp-details th,
-.camp-details td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.camp-details th {
-  background-color: #007BFF;
-  color: white;
-}
-
-.camp-details td {
-  background-color: #f9f9f9;
-}
-
-.weather-widget select {
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-#weather-info {
-  margin-top: 10px;
-  font-size: 1em;
-  color: #333;
-}
     .contact-details {
       margin-top: 30px;
       padding: 20px;
@@ -317,7 +279,45 @@
             font-style: italic;
             color: #666;
         }
+.camp-details h3,
+.weather-widget h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
 
+.camp-details table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.camp-details th,
+.camp-details td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.camp-details th {
+  background-color: #007BFF;
+  color: white;
+}
+
+.camp-details td {
+  background-color: #f9f9f9;
+}
+
+.weather-widget select {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#weather-info {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+}
   </style>
 </head>
 <body>
@@ -334,6 +334,33 @@
     <p>Thanks for your cooperation!</p>
     <p class="text-right">🚧 Contractor Camp Management</p>
   </div>
+<div class="camp-weather-container">
+  <!-- Camp Details -->
+  <div class="camp-details">
+    <h3>🏠 Camp Details</h3>
+    <table>
+      <tr>
+        <th>Total Residents</th>
+        <th>Vacant Rooms</th>
+      </tr>
+      <tr>
+        <td>1039</td>
+        <td>31</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Live Weather -->
+  <div class="weather-widget">
+    <h3>☁️ Live Weather</h3>
+    <select id="country-select" onchange="updateWeather()">
+      <option value="India">India</option>
+      <option value="Iraq">Iraq</option>
+      <option value="USA">USA</option>
+    </select>
+    <div id="weather-info">Select a country to view the weather.</div>
+  </div>
+</div>
 
   <!-- Home and About Buttons -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
@@ -350,6 +377,7 @@
 <li><a href="http://10.174.139.142/mrbs/web/index.php" target="_blank">Booking Camp Facility</a></li>
     </ul>
   </div>
+
 <script>
   // Dynamic greeting logic
   function displayGreeting() {
@@ -616,34 +644,8 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
     </div>
 <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
     <a class="about-button" href="about.html">ℹ️ About</a>
-  </div>
-<div class="camp-weather-container">
-  <!-- Camp Details -->
-  <div class="camp-details">
-    <h3>🏠 Camp Details</h3>
-    <table>
-      <tr>
-        <th>Total Residents</th>
-        <th>Vacant Rooms</th>
-      </tr>
-      <tr>
-        <td>1039</td>
-        <td>31</td>
-      </tr>
-    </table>
-  </div>
 
-  <!-- Live Weather -->
-  <div class="weather-widget">
-    <h3>☁️ Live Weather</h3>
-    <select id="country-select" onchange="updateWeather()">
-      <option value="India">India</option>
-      <option value="Iraq">Iraq</option>
-      <option value="USA">USA</option>
-    </select>
-    <div id="weather-info">Select a country to view the weather.</div>
   </div>
-</div>
 
  <!-- Contact Information -->
 <div class="container contact-details">
@@ -819,6 +821,7 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
       popup.style.display = 'none';
     }, 15000); // Hide popup after 05 seconds
   }, 10000); // Show popup after 05 seconds
+</script>
 <script>
   // Your existing JavaScript code...
 
@@ -847,6 +850,8 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
   }
 </script>
 
+<!-- Add this HTML inside your <body>, before or after the popup notification -->
+
 <div class="weather-widget">
   <h3>🌤️ Live Weather</h3>
   <select id="country-select" onchange="fetchWeather()">
@@ -865,5 +870,12 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
   💬 Wishing you a wonderful day ahead! 😊
 </div>
 
+<!-- Popup Notification -->
+<div class="popup" id="popup">
+  🌟 Your Actions Matter! 🌟
+🙏 Thank you for your time and commitment!
+💬 Wishing you a wonderful day ahead! 😊
+
+</div>
 </body>
 </html>
