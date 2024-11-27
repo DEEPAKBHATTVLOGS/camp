@@ -335,11 +335,11 @@
 
     if (currentHour >= 5 && currentHour < 12) {
       greetingMessage = "🌞 Good Morning, Residents!
-Welcome to Contractor Camp – where your comfort and needs are our Top priority.💁 How may I assist you today?📞";
+Welcome to Contractor Camp – where your comfort and needs are our Top priority.💁 How may I assist you today?🙏";
     } else if (currentHour >= 12 && currentHour < 18) {
-      greetingMessage = "☀️ Good Afternoon, Residents! Welcome to Contractor Camp – striving to make your day smoother and better. 💁 How may I assist you this afternoon?📞";
+      greetingMessage = "☀️ Good Afternoon, Residents! Welcome to Contractor Camp – striving to make your day smoother and better. 💁 How may I assist you this afternoon?🙏";
     } else {
-      greetingMessage = "🌙 Good Evening, Residents! Welcome to Contractor Camp – ensuring your stay is always pleasant and peaceful. 💁 How may I assist you tonight?📞";
+      greetingMessage = "🌙 Good Evening, Residents! Welcome to Contractor Camp – ensuring your stay is always pleasant and peaceful. 💁 How may I assist you tonight?🙏";
     }
 
     document.getElementById("greeting").innerText = greetingMessage;
@@ -388,9 +388,13 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
       🍼 Crushing Water Bottles
     </div>
     <div class="topic" onclick="showDetails('driving')">
-      <img src="https://img.lovepik.com/free-png/20210923/lovepik-car-icon-free-vector-illustration-material-png-image_401289221_wh1200.png" alt="Driving Icon">
+      <img src="https://cdn1.vectorstock.com/i/1000x1000/86/85/businessman-driving-car-3-vector-6488685.jpg" alt="Driving Icon">
       🚗 Slow Driving
     </div>
+    <div class="topic" onclick="showDetails('winter')">
+  <img src="https://cdn-icons-png.flaticon.com/512/3034/3034086.png" alt="Winter Icon">
+  ❄️ Winter Advisory
+</div>
   </div>
 </div>
 
@@ -569,6 +573,28 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
 
   </div>
 
+<div class="container details" id="winter">
+  <h2>❄️ Winter Advisory</h2>
+  <p>As the winter season begins, heavy cold winds are expected. To ensure your safety and comfort, please follow these guidelines:</p>
+  <h3>Important Tips:</h3>
+  <ul>
+    <li><strong>Keep Rooms Warm:</strong> Close windows and doors properly and use heaters responsibly with wall socket.</li>
+    <li><strong>Dress Warmly:</strong> Wear jackets, scarves, gloves, and warm layers, even indoors if needed.</li>
+    <li><strong>Stay Hydrated:</strong> Drink warm beverages and ensure you remain hydrated.</li>
+    <li><strong>Be Cautious Outdoors:</strong> Avoid prolonged exposure to the cold wind and watch for slippery surfaces due to frost or dew.</li>
+    <li><strong>Room Heater Advice:</strong> Always use room heaters with a wall socket to prevent any electrical short circuit and ensure safety.</li>
+    <li><strong>Emergency Contact:</strong> Reach out to camp management if you need any assistance.</li>
+  </ul>
+  <div class="nav-buttons">
+     <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
+
+  </div>
 
  <!-- Contact Information -->
 <div class="container contact-details">
