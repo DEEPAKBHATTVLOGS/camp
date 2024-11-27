@@ -23,51 +23,6 @@
       z-index: 1000;
     }
     
- .camp-details {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-}
-
-.camp-details h3 {
-  margin-bottom: 10px;
-  color: #007BFF;
-}
-
-.weather-widget {
-  position: absolute;
-  top: 350px;
-  left: 20px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-}
-
-.weather-widget h3 {
-  margin-bottom: 10px;
-  color: #007BFF;
-}
-
-#country-select {
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-#weather-info {
-  margin-top: 10px;
-  font-size: 1em;
-  color: #333;
-}
-
 
     #greeting {
       text-align: center;
@@ -110,6 +65,54 @@
     .important-links a:hover {
       text-decoration: underline;
     }
+    .camp-weather-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 100px;
+  left: 20px;
+  gap: 20px;
+}
+
+.camp-details {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
+
+.camp-details h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+.weather-widget {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
+
+.weather-widget h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+#country-select {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#weather-info {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
     .container {
       max-width: 1000px;
       margin: 20px auto;
@@ -849,8 +852,6 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
     }
   }
 </script>
-
-<!-- Add this HTML inside your <body>, before or after the popup notification -->
 
 <div class="weather-widget">
   <h3>🌤️ Live Weather</h3>
