@@ -352,14 +352,15 @@
 
   <!-- Live Weather -->
   <div class="weather-widget">
-    <h3>☁️ Live Weather</h3>
-    <select id="country-select" onchange="updateWeather()">
-      <option value="India">India</option>
-      <option value="Iraq">Iraq</option>
-      <option value="USA">USA</option>
-    </select>
-    <div id="weather-info">Select a country to view the weather.</div>
-  </div>
+  <h3>🌤️ Live Weather</h3>
+  <select id="country-select" onchange="fetchWeather()">
+    <option value="India">India</option>
+    <option value="Iraq">Iraq</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+  </select>
+  <p id="weather-info">Select a country to view the weather.</p>
+</div>
 </div>
 
   <!-- Home and About Buttons -->
@@ -861,13 +862,6 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
     <option value="UK">UK</option>
   </select>
   <p id="weather-info">Select a country to view the weather.</p>
-</div>
-
-<!-- Existing Popup Notification -->
-<div class="popup" id="popup">
-  🌟 Your Actions Matter! 🌟
-  🙏 Thank you for your time and commitment!
-  💬 Wishing you a wonderful day ahead! 😊
 </div>
 
 <!-- Popup Notification -->
