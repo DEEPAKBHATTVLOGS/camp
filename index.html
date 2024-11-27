@@ -23,7 +23,6 @@
       z-index: 1000;
     }
     
-
     #greeting {
       text-align: center;
       font-size: 1.5em;
@@ -65,7 +64,12 @@
     .important-links a:hover {
       text-decoration: underline;
     }
-    .camp-weather-container {
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+.camp-weather-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -112,13 +116,6 @@
   font-size: 1em;
   color: #333;
 }
-
-    .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
     .topic-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -319,12 +316,6 @@
     <p id="greeting"></p>
   </header>
 
-  <!-- Occupancy Count -->
-  <div class="count-display">
-    <span class="occupied">Occupied Beds: <strong>1040</strong></span>
-    <span class="vacant">Vacant Rooms: <strong>30</strong></span>
-  </div>
-
   <!-- Notice -->
   <div id="notice">
     <h2>🛑 Notice: Steel Laundry Hanger Collection</h2>
@@ -349,39 +340,6 @@
 <li><a href="http://10.174.139.142/mrbs/web/index.php" target="_blank">Booking Camp Facility</a></li>
     </ul>
   </div>
-<div class="camp-details">
-  <h3>🏠 Camp Details</h3>
-  <ul>
-    <li>Total Residents: <strong>1200</strong></li>
-    <li>Vacant Rooms:</li>
-    <ul>
-      <li>J1: <strong>5</strong></li>
-      <li>J2: <strong>3</strong></li>
-      <li>J3: <strong>4</strong></li>
-      <li>S4A: <strong>2</strong></li>
-      <li>PMC (Single): <strong>1</strong></li>
-      <li>S1: <strong>6</strong></li>
-      <li>S2: <strong>8</strong></li>
-      <li>S3: <strong>7</strong></li>
-      <li>S3A: <strong>0</strong></li>
-      <li>NEW S4A: <strong>2</strong></li>
-      <li>S4B: <strong>3</strong></li>
-      <li>S4: <strong>1</strong></li>
-    </ul>
-  </ul>
-</div>
-
-<div class="weather-widget">
-  <h3>🌤️ Live Weather</h3>
-  <select id="country-select" onchange="fetchWeather()">
-    <option value="India">India</option>
-    <option value="Iraq">Iraq</option>
-    <option value="USA">USA</option>
-    <option value="UK">UK</option>
-  </select>
-  <p id="weather-info">Select a country to view the weather.</p>
-</div>
-
 <script>
   // Dynamic greeting logic
   function displayGreeting() {
@@ -650,6 +608,38 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
     <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
+<div class="camp-details">
+  <h3>🏠 Camp Details</h3>
+  <ul>
+    <li>Total Residents: <strong>1200</strong></li>
+    <li>Vacant Rooms:</li>
+    <ul>
+      <li>J1: <strong>5</strong></li>
+      <li>J2: <strong>3</strong></li>
+      <li>J3: <strong>4</strong></li>
+      <li>S4A: <strong>2</strong></li>
+      <li>PMC (Single): <strong>1</strong></li>
+      <li>S1: <strong>6</strong></li>
+      <li>S2: <strong>8</strong></li>
+      <li>S3: <strong>7</strong></li>
+      <li>S3A: <strong>0</strong></li>
+      <li>NEW S4A: <strong>2</strong></li>
+      <li>S4B: <strong>3</strong></li>
+      <li>S4: <strong>1</strong></li>
+    </ul>
+  </ul>
+</div>
+
+<div class="weather-widget">
+  <h3>🌤️ Live Weather</h3>
+  <select id="country-select" onchange="fetchWeather()">
+    <option value="India">India</option>
+    <option value="Iraq">Iraq</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+  </select>
+  <p id="weather-info">Select a country to view the weather.</p>
+</div>
 
  <!-- Contact Information -->
 <div class="container contact-details">
