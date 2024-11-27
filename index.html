@@ -23,31 +23,51 @@
       z-index: 1000;
     }
     
- .count-display {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      background: #ffcccc; /* Temporary background for visibility */
-      color: #007BFF;
-      border-radius: 10px;
-      padding: 10px 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      font-size: 1em;
-      font-weight: bold;
-    }
+ .camp-details {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
 
-    .count-display span {
-      display: block;
-      margin-bottom: 5px;
-    }
+.camp-details h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
 
-    .count-display .occupied {
-      color: #007BFF;
-    }
+.weather-widget {
+  position: absolute;
+  top: 350px;
+  left: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+}
 
-    .count-display .vacant {
-      color: #28a745;
-    }
+.weather-widget h3 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+#country-select {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#weather-info {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
 
     #greeting {
       text-align: center;
@@ -326,6 +346,38 @@
 <li><a href="http://10.174.139.142/mrbs/web/index.php" target="_blank">Booking Camp Facility</a></li>
     </ul>
   </div>
+<div class="camp-details">
+  <h3>🏠 Camp Details</h3>
+  <ul>
+    <li>Total Residents: <strong>1200</strong></li>
+    <li>Vacant Rooms:</li>
+    <ul>
+      <li>J1: <strong>5</strong></li>
+      <li>J2: <strong>3</strong></li>
+      <li>J3: <strong>4</strong></li>
+      <li>S4A: <strong>2</strong></li>
+      <li>PMC (Single): <strong>1</strong></li>
+      <li>S1: <strong>6</strong></li>
+      <li>S2: <strong>8</strong></li>
+      <li>S3: <strong>7</strong></li>
+      <li>S3A: <strong>0</strong></li>
+      <li>NEW S4A: <strong>2</strong></li>
+      <li>S4B: <strong>3</strong></li>
+      <li>S4: <strong>1</strong></li>
+    </ul>
+  </ul>
+</div>
+
+<div class="weather-widget">
+  <h3>🌤️ Live Weather</h3>
+  <select id="country-select" onchange="fetchWeather()">
+    <option value="India">India</option>
+    <option value="Iraq">Iraq</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+  </select>
+  <p id="weather-info">Select a country to view the weather.</p>
+</div>
 
 <script>
   // Dynamic greeting logic
@@ -770,14 +822,53 @@ Welcome to Contractor Camp – where your comfort and needs are our Top priority
       popup.style.display = 'none';
     }, 15000); // Hide popup after 05 seconds
   }, 10000); // Show popup after 05 seconds
+<script>
+  // Your existing JavaScript code...
+
+  async function fetchWeather() {
+    const country = document.getElementById('country-select').value;
+    const apiKey = 'your_api_key_here'; // Replace with your OpenWeather API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`;
+
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        const temperature = data.main.temp;
+        const weather = data.weather[0].description;
+
+        document.getElementById('weather-info').textContent =
+          `Current Temperature in ${country}: ${temperature}°C, ${weather}`;
+      } else {
+        document.getElementById('weather-info').textContent =
+          'Unable to fetch weather data. Please try again later.';
+      }
+    } catch (error) {
+      document.getElementById('weather-info').textContent =
+        'Error fetching weather data. Please check your internet connection.';
+    }
+  }
 </script>
 
-<!-- Popup Notification -->
+<!-- Add this HTML inside your <body>, before or after the popup notification -->
+
+<div class="weather-widget">
+  <h3>🌤️ Live Weather</h3>
+  <select id="country-select" onchange="fetchWeather()">
+    <option value="India">India</option>
+    <option value="Iraq">Iraq</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+  </select>
+  <p id="weather-info">Select a country to view the weather.</p>
+</div>
+
+<!-- Existing Popup Notification -->
 <div class="popup" id="popup">
   🌟 Your Actions Matter! 🌟
-🙏 Thank you for your time and commitment!
-💬 Wishing you a wonderful day ahead! 😊
-
+  🙏 Thank you for your time and commitment!
+  💬 Wishing you a wonderful day ahead! 😊
 </div>
+
 </body>
 </html>
