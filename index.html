@@ -394,18 +394,38 @@
   </div>
 
 <script>
-  // Dynamic greeting logic
+  // Dynamic greeting logic with daily messages
   function displayGreeting() {
     const currentHour = new Date().getHours();
+    const dailyMessages = {
+      morning: [
+        "🌞 Good Morning, Residents! Start your day with positivity and energy! 💁 How may I assist you today? 🙏",
+        "🌅 Rise and shine, Residents! Let’s make today amazing. 💁 How may I help you? 🙏",
+        "☕ Good Morning, Residents! Your comfort is our top priority. 💁 How may I assist you? 🙏"
+      ],
+      afternoon: [
+        "☀️ Good Afternoon, Residents! Stay motivated and hydrated this afternoon. 💁 How may I assist you? 🙏",
+        "🌤️ Good Afternoon, Residents! Let’s make this day productive together. 💁 How can I help you? 🙏",
+        "🍴 Good Afternoon, Residents! Hope you’re having a great day so far. 💁 How may I assist you? 🙏"
+      ],
+      evening: [
+        "🌙 Good Evening, Residents! Relax and enjoy your evening. 💁 How may I assist you tonight? 🙏",
+        "⭐ Good Evening, Residents! We’re here to ensure your comfort. 💁 How can I help you tonight? 🙏",
+        "🌌 Good Evening, Residents! Wishing you a peaceful and cozy night. 💁 How may I assist you? 🙏"
+      ]
+    };
+
     let greetingMessage = "";
 
     if (currentHour >= 5 && currentHour < 12) {
-      greetingMessage = "🌞 Good Morning, Residents!
-Welcome to Contractor Camp – where your comfort and needs are our Top priority.💁 How may I assist you today?🙏";
+      // Morning messages
+      greetingMessage = dailyMessages.morning[new Date().getDate() % dailyMessages.morning.length];
     } else if (currentHour >= 12 && currentHour < 18) {
-      greetingMessage = "☀️ Good Afternoon, Residents! Welcome to Contractor Camp – striving to make your day smoother and better. 💁 How may I assist you this afternoon?🙏";
+      // Afternoon messages
+      greetingMessage = dailyMessages.afternoon[new Date().getDate() % dailyMessages.afternoon.length];
     } else {
-      greetingMessage = "🌙 Good Evening, Residents! Welcome to Contractor Camp – ensuring your stay is always pleasant and peaceful. 💁 How may I assist you tonight?🙏";
+      // Evening messages
+      greetingMessage = dailyMessages.evening[new Date().getDate() % dailyMessages.evening.length];
     }
 
     document.getElementById("greeting").innerText = greetingMessage;
