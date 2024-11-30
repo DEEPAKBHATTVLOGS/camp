@@ -811,23 +811,45 @@
             }
         }, 10000); // 10000ms = 10 seconds
 
-    // Display dynamic greeting
-    function displayGreeting() {
-      const currentHour = new Date().getHours();
-      let greetingMessage = "";
+    // Display dynamic greeting with daily rotating messages
+function displayGreeting() {
+  const currentHour = new Date().getHours();
+  const dailyMessages = {
+    morning: [
+      "🌞 Good Morning, Residents! Start your day with positivity and energy. 💁 How may I assist you today? 📞",
+      "🌅 Good Morning, Residents! Bright skies and good vibes await you. 💁 How can I help? 📞",
+      "☀️ Good Morning, Residents! Welcome to Contractor Camp – making every day brighter for you. 💁 How may I assist? 📞"
+    ],
+    afternoon: [
+      "☀️ Good Afternoon, Residents! Let’s make this afternoon productive and pleasant. 💁 How may I assist you? 📞",
+      "🌤️ Good Afternoon, Residents! Your comfort and convenience are our priority. 💁 Need assistance? 📞",
+      "🍴 Good Afternoon, Residents! Hope your day is going smoothly. 💁 How can I help you? 📞"
+    ],
+    evening: [
+      "🌙 Good Evening, Residents! Wishing you a relaxing and cozy evening. 💁 How may I assist you tonight? 📞",
+      "⭐ Good Evening, Residents! Let Contractor Camp make your evening peaceful. 💁 Need help? 📞",
+      "🌌 Good Evening, Residents! Sit back and unwind; we’re here for you. 💁 How may I assist? 📞"
+    ]
+  };
 
-      if (currentHour >= 5 && currentHour < 12) {
-        greetingMessage = "🌞 Good Morning, Residents!Welcome to Contractor Camp.where your comfort and needs are our priority.💁 How may I assist you today?📞";
-      } else if (currentHour >= 12 && currentHour < 18) {
-        greetingMessage = "☀️ Good Afternoon, Residents! Welcome to Contractor Camp – striving to make your day smoother and better. 💁 How may I assist you this afternoon?📞";
-      } else {
-        greetingMessage = "🌙 Good Evening, Residents! Welcome to Contractor Camp – ensuring your stay is always pleasant and peaceful. 💁 How may I assist you tonight?📞";
-      }
+  let greetingMessage = "";
 
-      document.getElementById("greeting").innerText = greetingMessage;
-    }
+  if (currentHour >= 5 && currentHour < 12) {
+    // Morning message
+    greetingMessage = dailyMessages.morning[new Date().getDate() % dailyMessages.morning.length];
+  } else if (currentHour >= 12 && currentHour < 18) {
+    // Afternoon message
+    greetingMessage = dailyMessages.afternoon[new Date().getDate() % dailyMessages.afternoon.length];
+  } else {
+    // Evening message
+    greetingMessage = dailyMessages.evening[new Date().getDate() % dailyMessages.evening.length];
+  }
 
-    window.onload = displayGreeting;
+  document.getElementById("greeting").innerText = greetingMessage;
+}
+
+window.onload = displayGreeting;
+
 
  // Show topic details
     function showDetails(topicId) {
