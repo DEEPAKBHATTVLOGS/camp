@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Contractor Camp</title>
+  <style>
+    /* Fullscreen black background */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    /* Welcome message container */
+    .welcome-container {
+      position: relative;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+
+    /* Dynamic greeting text */
+    .greeting {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Subtext animation */
+    .subtext {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards 3s;
+    }
+
+    /* Moving light animation */
+    .moving-light {
+      position: absolute;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255, 223, 0, 0.3) 0%, rgba(255, 223, 0, 0.1) 40%, rgba(255, 223, 0, 0) 100%);
+      border-radius: 50%;
+      animation: lightMove 7s infinite alternate ease-in-out;
+    }
+
+    @keyframes lightMove {
+      0% {
+        top: -50%;
+        left: -50%;
+        transform: scale(1);
+      }
+      25% {
+        top: 0%;
+        left: 50%;
+        transform: scale(1.5);
+      }
+      50% {
+        top: 50%;
+        left: 50%;
+        transform: scale(2);
+      }
+      75% {
+        top: 50%;
+        left: -20%;
+        transform: scale(1.5);
+      }
+      100% {
+        top: -50%;
+        left: -50%;
+        transform: scale(1);
+      }
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Enter button */
+    .enter-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: white;
+      background: #007BFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards 5s;
+    }
+
+    .enter-button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Moving light effect -->
+  <div class="moving-light"></div>
+
+  <!-- Welcome Message -->
+  <div class="welcome-container">
+    <div class="greeting" id="dynamic-greeting">Welcome to Contractor Camp</div>
+    <div class="subtext">Ensuring comfort, safety, and excellence every step of the way.</div>
+    <button class="enter-button" onclick="enterSite()">Enter Site</button>
+  </div>
+
+  <script>
+    // Dynamic Greeting Message Based on Time of Day
+    function updateGreeting() {
+      const currentHour = new Date().getHours();
+      const greetingElement = document.getElementById('dynamic-greeting');
+      let greetingMessage = "";
+
+      if (currentHour >= 5 && currentHour < 12) {
+        greetingMessage = "🌞 Good Morning, Welcome to Contractor Camp!";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        greetingMessage = "☀️ Good Afternoon, Welcome to Contractor Camp!";
+      } else {
+        greetingMessage = "🌙 Good Evening, Welcome to Contractor Camp!";
+      }
+
+      greetingElement.innerText = greetingMessage;
+    }
+
+    // Call the greeting function on load
+    updateGreeting();
+
+    // Enter Site Function
+    function enterSite() {
+      window.location.href = "homepage.html"; // Replace with your main site URL
+    }
+  </script>
+</body>
+</html>
