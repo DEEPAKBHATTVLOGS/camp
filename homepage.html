@@ -172,26 +172,6 @@
 .nav-button:hover {
     background-color: #0056b3;
 }
-    /* Guidelines Button Styling */
-    
-.guidelines-button {
-  position: absolute;
-  top: 15px; /* Adjust top position to align with other buttons */
-  right: 220px; /* Adjust the right position as per layout */
-  padding: 10px 15px;
-  background: #FF9800; /* Orange for Guidelines button */
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 1em;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.guidelines-button:hover {
-  background: #F57C00; /* Darker orange on hover */
-}
-
     .about-button {
     position: absolute;
     top: 15px; /* Same top position as Home */
@@ -392,8 +372,6 @@
   <!-- Home and About Buttons -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
   <a class="about-button" href="about.html">ℹ️ About</a>
-  <a class="guidelines-button" href="pages/Guidelines.html">📖 Guidelines</a>
-
 
   
 <!-- Important Links Section -->
@@ -456,6 +434,7 @@
 </script>
 </body>
 </html>
+
   <div class="container" id="main-menu">
   <div class="topic-list">
     <div class="topic" onclick="showDetails('smoking')">
@@ -497,6 +476,7 @@
   </div>
 </div>
 
+
 <!-- Detailed Descriptions for Each Topic -->
   <div class="container details" id="smoking">
     <h2>🚭 Smoking in Designated Areas</h2>
@@ -509,14 +489,16 @@
       <li><strong>Compliance with Regulations:</strong> Many projects mandate designated smoking areas.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
+      <a class="nav-button" onclick="showDetails('trash')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
+
   <!-- Detailed Descriptions for Each Topic -->
 
   <div class="container details" id="trash">
@@ -530,12 +512,13 @@
       <li><strong>Safety:</strong> Reduces the chances of tripping hazards and injuries caused by scattered waste.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
 
@@ -550,12 +533,14 @@
       <li><strong>Waste Management:</strong> Less paper waste means easier disposal and fewer environmental hazards.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('trash')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('water')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
+
   </div>
 
 <div class="container details" id="water">
@@ -568,15 +553,18 @@
       <li><strong>Sustainability:</strong> Conserving water ensures its availability for future generations and critical project needs.</li>
       <li><strong>Preventing Flooding:</strong> Leaving taps open can lead to water spills, damaging floors and creating safety hazards.</li>
     </ul>
-   <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+    <div class="nav-buttons">
+      <a class="nav-button" onclick="showDetails('towels')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('printing')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
+
+
 <div class="container details" id="printing">
     <h2>🖨️ Minimizing Color Printing</h2>
     <p>Minimizing color printing involves using black-and-white or digital alternatives to reduce unnecessary resource consumption and lower costs.</p>
@@ -588,14 +576,16 @@
       <li><strong>Professional Standards:</strong> Ensures that printing is used judiciously, preserving resources for essential needs.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('water')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('lights')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
+
  <div class="container details" id="lights">
     <h2>💡 Switching Off Lights</h2>
     <p>Switching off lights in unoccupied rooms helps conserve electricity and reduces the carbon footprint of the project.</p>
@@ -607,15 +597,16 @@
       <li><strong>Cost Efficiency:</strong> Saves money on electricity bills, which can be allocated to other project needs.</li>
     </ul>
     <div class="nav-buttons">
-  <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('printing')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('bottles')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+   <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
+
 <div class="container details" id="bottles">
     <h2>🍼 Crushing Water Bottles</h2>
     <p>Crushing water bottles before disposal minimizes the space they occupy, making waste management more efficient.</p>
@@ -627,12 +618,14 @@
       <li><strong>Cleanliness:</strong> Prevents bottles from being reused unsafely or scattered inappropriately.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('lights')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('driving')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+   <a class="about-button" href="about.html">ℹ️ About</a>
+  
 
   </div>
 
@@ -648,12 +641,13 @@
       <li><strong>Pedestrian Safety:</strong> Ensures a safe environment for people walking or working near vehicle pathways.</li>
     </ul>
     <div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+      <a class="nav-button" onclick="showDetails('bottles')">⬅ Previous</a>
+      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+   <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
 
@@ -669,13 +663,14 @@
     <li><strong>Room Heater Advice:</strong> Always use room heaters with a wall socket to prevent any electrical short circuit and ensure safety.</li>
     <li><strong>Emergency Contact:</strong> Reach out to camp management if you need any assistance.</li>
   </ul>
-<div class="nav-buttons">
-  <a class="nav-button" onclick="showDetails('previous-topic-id')">⬅ Previous</a>
-  <a class="nav-button" onclick="showDetails('next-topic-id')">Next ➡</a>
-  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
-  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
-</div>
+  <div class="nav-buttons">
+     <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+      <a class="nav-button" href="about.html">About</a>
+      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    </div>
+<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+    <a class="about-button" href="about.html">ℹ️ About</a>
 
   </div>
 
@@ -849,63 +844,60 @@ window.onload = displayGreeting;
 
 
  // Show topic details
-function showDetails(topicId) {
-  const details = document.querySelectorAll('.details');
-  details.forEach(detail => detail.style.display = 'none'); // Hide all topics
-  const selectedDetail = document.getElementById(topicId);
-  if (selectedDetail) {
-    selectedDetail.style.display = 'block'; // Show the selected topic
-    document.getElementById('main-menu').style.display = 'none'; // Hide main menu
-  }
-}
+    function showDetails(topicId) {
+      const details = document.querySelectorAll('.details');
+      details.forEach(detail => detail.style.display = 'none');
+      document.getElementById(topicId).style.display = 'block';
+      document.getElementById('main-menu').style.display = 'none';
+    }
 
-// Go back to the main menu
-function goBack() {
-  const details = document.querySelectorAll('.details');
-  details.forEach(detail => detail.style.display = 'none'); // Hide all topics
-  document.getElementById('main-menu').style.display = 'block'; // Show main menu
-}
+    function goBack() {
+      const details = document.querySelectorAll('.details');
+           details.forEach(detail => detail.style.display = 'none');
+      document.getElementById('main-menu').style.display = 'block';
+    }
 
-// Show popup message after viewing a topic for 5 seconds
-setTimeout(() => {
-  const popup = document.getElementById('popup');
-  if (popup) {
+    // Show popup message after viewing a topic for 05 seconds
+  setTimeout(() => {
+    const popup = document.getElementById('popup');
     popup.style.display = 'block';
 
     // Smooth scroll to the popup
     popup.scrollIntoView({ behavior: 'smooth' });
 
-    // Hide popup after 15 seconds
+    // Hide popup after 05 seconds
     setTimeout(() => {
       popup.style.display = 'none';
-    }, 15000);
-  }
-}, 5000);
+    }, 15000); // Hide popup after 05 seconds
+  }, 10000); // Show popup after 05 seconds
+</script>
+<script>
+  // Your existing JavaScript code...
 
-// Fetch and display weather data
-async function fetchWeather() {
-  const country = document.getElementById('country-select').value;
-  const apiKey = 'f358b7e26f2d0589466ba82011555550'; // Replace with your OpenWeather API key
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`;
+  async function fetchWeather() {
+    const country = document.getElementById('country-select').value;
+    const apiKey = 'f358b7e26f2d0589466ba82011555550'; // Replace with your OpenWeather API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`;
 
-  try {
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      const temperature = data.main.temp;
-      const weather = data.weather[0].description;
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        const temperature = data.main.temp;
+        const weather = data.weather[0].description;
 
+        document.getElementById('weather-info').textContent =
+          `Current Temperature in ${country}: ${temperature}°C, ${weather}`;
+      } else {
+        document.getElementById('weather-info').textContent =
+          'Unable to fetch weather data. Please try again later.';
+      }
+    } catch (error) {
       document.getElementById('weather-info').textContent =
-        `Current Temperature in ${country}: ${temperature}°C, ${weather}`;
-    } else {
-      document.getElementById('weather-info').textContent =
-        'Unable to fetch weather data. Please try again later.';
+        'Error fetching weather data. Please check your internet connection.';
     }
-  } catch (error) {
-    document.getElementById('weather-info').textContent =
-      'Error fetching weather data. Please check your internet connection.';
   }
-}
+</script>
 
 <!-- Popup Notification -->
 <div class="popup" id="popup">
