@@ -172,6 +172,25 @@
 .nav-button:hover {
     background-color: #0056b3;
 }
+    /* Guidelines Button Styling */
+.guidelines-button {
+  position: absolute;
+  top: 15px; /* Adjust top position to align with other buttons */
+  right: 220px; /* Adjust the right position as per layout */
+  padding: 10px 15px;
+  background: #FF9800; /* Orange for Guidelines button */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.guidelines-button:hover {
+  background: #F57C00; /* Darker orange on hover */
+}
+
     .about-button {
     position: absolute;
     top: 15px; /* Same top position as Home */
@@ -372,6 +391,8 @@
   <!-- Home and About Buttons -->
   <a class="home-button" onclick="goBack()">🏠 Home</a>
   <a class="about-button" href="about.html">ℹ️ About</a>
+  <a class="guidelines-button" href="pages/Guidelines.html">📖 Guidelines</a>
+
 
   
 <!-- Important Links Section -->
@@ -489,13 +510,15 @@
       <li><strong>Compliance with Regulations:</strong> Many projects mandate designated smoking areas.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
-      <a class="nav-button" onclick="showDetails('trash')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -512,13 +535,15 @@
       <li><strong>Safety:</strong> Reduces the chances of tripping hazards and injuries caused by scattered waste.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -533,13 +558,15 @@
       <li><strong>Waste Management:</strong> Less paper waste means easier disposal and fewer environmental hazards.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('trash')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('water')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -554,13 +581,15 @@
       <li><strong>Preventing Flooding:</strong> Leaving taps open can lead to water spills, damaging floors and creating safety hazards.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('towels')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('printing')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -576,13 +605,15 @@
       <li><strong>Professional Standards:</strong> Ensures that printing is used judiciously, preserving resources for essential needs.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('water')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('lights')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-  <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -597,13 +628,15 @@
       <li><strong>Cost Efficiency:</strong> Saves money on electricity bills, which can be allocated to other project needs.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('printing')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('bottles')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-   <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -618,13 +651,15 @@
       <li><strong>Cleanliness:</strong> Prevents bottles from being reused unsafely or scattered inappropriately.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('lights')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('driving')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-   <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
   
 
   </div>
@@ -641,13 +676,15 @@
       <li><strong>Pedestrian Safety:</strong> Ensures a safe environment for people walking or working near vehicle pathways.</li>
     </ul>
     <div class="nav-buttons">
-      <a class="nav-button" onclick="showDetails('bottles')">⬅ Previous</a>
-      <a class="nav-button" onclick="goBack()">⬅ Back to Menu</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-   <a class="about-button" href="about.html">ℹ️ About</a>
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
+
 
   </div>
 
@@ -663,14 +700,15 @@
     <li><strong>Room Heater Advice:</strong> Always use room heaters with a wall socket to prevent any electrical short circuit and ensure safety.</li>
     <li><strong>Emergency Contact:</strong> Reach out to camp management if you need any assistance.</li>
   </ul>
-  <div class="nav-buttons">
-     <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
-      <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
-      <a class="nav-button" href="about.html">About</a>
-      <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    </div>
-<a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
-    <a class="about-button" href="about.html">ℹ️ About</a>
+<div class="nav-buttons">
+  <!-- Navigation Buttons -->
+  <a class="nav-button" onclick="showDetails('smoking')">⬅ Previous</a>
+  <a class="nav-button" onclick="showDetails('towels')">Next ➡</a>
+  <a class="nav-button home-button" onclick="goBack()">🏠 Home</a>
+  <a class="nav-button about-button" href="about.html">ℹ️ About</a>
+  <a class="nav-button guidelines-button" href="Guidelines.html">📖 Guidelines</a>
+</div>
+
 
   </div>
 
