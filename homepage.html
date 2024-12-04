@@ -413,35 +413,36 @@
     document.getElementById("greeting").innerText = greetingMessage;
   }
 
+  <script>
   // Daily notices logic
-const notices = [
-  "🛑 Return Extra Steel Laundry Hangers: Please return unused hangers with your laundry or leave them outside your door.",
-  "🚬 Proper Use of Cigarette Disposal Boxes: Dispose of cigarette butts only. Avoid disposing of paper cups, food waste, or tissues.",
-  "🚽 Do Not Throw Food and Tissue Inside Toilets: Help maintain hygiene and avoid blockages.",
-  "💡 Turn Off Lights When You Leave the Room: Conserve energy and reduce waste.",
-  "🔒 Lock Your Door and Keep Your Valuables Safe: Ensure safety for yourself and others."
-];
+  const notices = [
+    "🛑 Return Extra Steel Laundry Hangers: Please return unused hangers with your laundry or leave them outside your door.",
+    "🚬 Proper Use of Cigarette Disposal Boxes: Dispose of cigarette butts only. Avoid disposing of paper cups, food waste, or tissues.",
+    "🚽 Do Not Throw Food and Tissue Inside Toilets: Help maintain hygiene and avoid blockages.",
+    "💡 Turn Off Lights When You Leave the Room: Conserve energy and reduce waste.",
+    "🔒 Lock Your Door and Keep Your Valuables Safe: Ensure safety for yourself and others."
+  ];
 
-function displayNotice() {
-  const today = new Date().getDate(); // Get the current date
-  const noticeMessage = notices[today % notices.length]; // Rotate notices daily
-  document.getElementById("notice-title").innerText = "📢 Daily Notice";
-  document.getElementById("notice-content").innerText = noticeMessage;
-}
+  function displayNotice() {
+    const today = new Date().getDate(); // Get the current date
+    const noticeMessage = notices[today % notices.length]; // Rotate notices daily
 
-// Back to Main Menu Functionality
-function goBack() {
-  const details = document.querySelectorAll('.details');
-  details.forEach(detail => detail.style.display = 'none');
-  const mainMenu = document.getElementById('main-menu');
-  if (mainMenu) mainMenu.style.display = 'block';
-}
+    // Debugging: Check the selected notice
+    console.log("Notice being displayed:", noticeMessage);
 
-// Call functions on page load
-window.onload = function () {
-  displayGreeting();
-  displayNotice();
-};
+    // Update the notice in the HTML
+    document.getElementById("notice-title").innerText = "📢 Daily Notice";
+    document.getElementById("notice-content").innerText = noticeMessage;
+
+    // Debugging: Check if the HTML elements are updated
+    console.log("Notice title updated to:", document.getElementById("notice-title").innerText);
+    console.log("Notice content updated to:", document.getElementById("notice-content").innerText);
+  }
+
+  window.onload = function () {
+    displayGreeting();
+    displayNotice();
+  };
 
 </script>
 
