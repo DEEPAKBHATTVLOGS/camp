@@ -326,12 +326,20 @@
     <p id="greeting"></p>
   </header>
 
-<!-- Notice Section -->
+ <!-- Notice -->
 <div id="notice">
-  <h2 id="notice-title"></h2>
-  <p id="notice-content"></p>
+  <h2>🛑 Notice: Proper Use of Cigarette Disposal Boxes</h2>
+  <p>Dear Residents,</p>
+  <p>📢 Cigarette disposal boxes are for cigarette butts only. Please do not dispose of:</p>
+  <ul>
+    <li>Paper cups 🥤</li>
+    <li>Food waste 🍔</li>
+    <li>Tissues 🧻</li>
+  </ul>
+  <p>🚨 Improper disposal can cause **fire hazards**, endangering everyone's safety. Please use these boxes responsibly to maintain a safe environment. 🙏</p>
   <p class="text-right">🚧 Contractor Camp Management</p>
 </div>
+
 
 <div class="camp-weather-container">
   <!-- Camp Details -->
@@ -384,68 +392,47 @@
     const currentHour = new Date().getHours();
     const dailyMessages = {
       morning: [
-        "🌞 Good Morning, Residents! Start your day with positivity and energy! 🙏 How may I assist you today? 🙏",
-        "☀️ Rise and shine, Residents! Let’s make today amazing. 🙏 How may I help you? 🙏",
-        "🌅 Good Morning, Residents! Your comfort is our top priority. 🙏 How may I assist you? 🙏"
+        "🌞 Good Morning, Residents! Start your day with positivity and energy! 💁 How may I assist you today? 🙏",
+        "🌅 Rise and shine, Residents! Let’s make today amazing. 💁 How may I help you? 🙏",
+        "☕ Good Morning, Residents! Your comfort is our top priority. 💁 How may I assist you? 🙏"
       ],
       afternoon: [
-        "🌤️ Good Afternoon, Residents! Stay motivated and hydrated this afternoon. 🙏 How may I assist you today? 🙏",
-        "☀️ Good Afternoon, Residents! Let’s make this day productive together. 🙏 How can I help you? 🙏",
-        "🌞 Good Afternoon, Residents! Hope you’re having a great day so far. 🙏 How may I assist you? 🙏"
+        "☀️ Good Afternoon, Residents! Stay motivated and hydrated this afternoon. 💁 How may I assist you? 🙏",
+        "🌤️ Good Afternoon, Residents! Let’s make this day productive together. 💁 How can I help you? 🙏",
+        "🍴 Good Afternoon, Residents! Hope you’re having a great day so far. 💁 How may I assist you? 🙏"
       ],
       evening: [
-        "🌙 Good Evening, Residents! Relax and enjoy your evening. 🙏 How may I assist you tonight? 🙏",
-        "✨ Good Evening, Residents! We’re here to ensure your comfort. 🙏 How can I help you tonight? 🙏",
-        "🌌 Good Evening, Residents! Wishing you a peaceful and cozy night. 🙏 How may I assist you? 🙏"
+        "🌙 Good Evening, Residents! Relax and enjoy your evening. 💁 How may I assist you tonight? 🙏",
+        "⭐ Good Evening, Residents! We’re here to ensure your comfort. 💁 How can I help you tonight? 🙏",
+        "🌌 Good Evening, Residents! Wishing you a peaceful and cozy night. 💁 How may I assist you? 🙏"
       ]
     };
 
     let greetingMessage = "";
 
     if (currentHour >= 5 && currentHour < 12) {
+      // Morning messages
       greetingMessage = dailyMessages.morning[new Date().getDate() % dailyMessages.morning.length];
     } else if (currentHour >= 12 && currentHour < 18) {
+      // Afternoon messages
       greetingMessage = dailyMessages.afternoon[new Date().getDate() % dailyMessages.afternoon.length];
     } else {
+      // Evening messages
       greetingMessage = dailyMessages.evening[new Date().getDate() % dailyMessages.evening.length];
     }
 
     document.getElementById("greeting").innerText = greetingMessage;
   }
 
-  <script>
-  // Daily notices logic
-  const notices = [
-    "🛑 Return Extra Steel Laundry Hangers: Please return unused hangers with your laundry or leave them outside your door.",
-    "🚬 Proper Use of Cigarette Disposal Boxes: Dispose of cigarette butts only. Avoid disposing of paper cups, food waste, or tissues.",
-    "🚽 Do Not Throw Food and Tissue Inside Toilets: Help maintain hygiene and avoid blockages.",
-    "💡 Turn Off Lights When You Leave the Room: Conserve energy and reduce waste.",
-    "🔒 Lock Your Door and Keep Your Valuables Safe: Ensure safety for yourself and others."
-  ];
-
-  function displayNotice() {
-    const today = new Date().getDate(); // Get the current date
-    const noticeMessage = notices[today % notices.length]; // Rotate notices daily
-
-    // Debugging: Check the selected notice
-    console.log("Notice being displayed:", noticeMessage);
-
-    // Update the notice in the HTML
-    document.getElementById("notice-title").innerText = "📢 Daily Notice";
-    document.getElementById("notice-content").innerText = noticeMessage;
-
-    // Debugging: Check if the HTML elements are updated
-    console.log("Notice title updated to:", document.getElementById("notice-title").innerText);
-    console.log("Notice content updated to:", document.getElementById("notice-content").innerText);
+  function goBack() {
+    const details = document.querySelectorAll('.details');
+    details.forEach(detail => detail.style.display = 'none');
+    const mainMenu = document.getElementById('main-menu');
+    if (mainMenu) mainMenu.style.display = 'block';
   }
 
-  window.onload = function () {
-    displayGreeting();
-    displayNotice();
-  };
-
+  window.onload = displayGreeting;
 </script>
-
 </body>
 </html>
 
