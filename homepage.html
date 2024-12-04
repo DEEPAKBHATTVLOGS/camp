@@ -326,16 +326,12 @@
     <p id="greeting"></p>
   </header>
 
- <!-- Notice -->
-<!-- Notice -->
+<!-- Notice Section -->
 <div id="notice">
   <h2 id="notice-title"></h2>
-  <p id="notice-intro"></p>
-  <ul id="notice-points"></ul>
-  <p id="notice-conclusion"></p>
+  <p id="notice-content"></p>
   <p class="text-right">🚧 Contractor Camp Management</p>
 </div>
-
 
 <div class="camp-weather-container">
   <!-- Camp Details -->
@@ -429,9 +425,11 @@
   function displayNotice() {
     const today = new Date().getDate(); // Get the current date
     const noticeMessage = notices[today % notices.length]; // Rotate notices daily
+    document.getElementById("notice-title").innerText = "🛑 Daily Notice";
     document.getElementById("notice-content").innerText = noticeMessage;
   }
 
+  // Back to Main Menu Functionality
   function goBack() {
     const details = document.querySelectorAll('.details');
     details.forEach(detail => detail.style.display = 'none');
@@ -439,13 +437,13 @@
     if (mainMenu) mainMenu.style.display = 'block';
   }
 
-  // Call the functions on page load
+  // Call functions on page load
   window.onload = function () {
     displayGreeting();
     displayNotice();
   };
-  window.onload = displayGreeting;
 </script>
+
 </body>
 </html>
 
